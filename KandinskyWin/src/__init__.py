@@ -8,8 +8,8 @@ plt.title("Root image")
 plt.xlabel("time")
 plt.ylabel("note")
 
-rootImage = mpimg.imread("C:/Users/Johan/eclipse-workspace/KandinskyWin/johtonic.png")
-plt.imshow(rootImage)
+rootImage = mpimg.imread("C:/Users/Johan/eclipse-workspace/KandinskyWin/midiPanik.png")
+#plt.imshow(rootImage) #uncomment if you want to check the read image
 plt.show()
 
 imageData = rootImage.tolist()
@@ -109,9 +109,9 @@ for line in imageData:
 		nc = nc+1
 	
 	if (goOn):
-		messagesArrayR[nc].append(Message('note_off', note=pitch, velocity=64, time=end))
-		messagesArrayG[nc].append(Message('note_off', note=pitch, velocity=64, time=end))
-		messagesArrayB[nc].append(Message('note_off', note=pitch, velocity=64, time=end))
+		messagesArrayR[nc].append(Message('note_off', note=pitch, velocity=64, time=end)) # all notes off
+		messagesArrayG[nc].append(Message('note_off', note=pitch, velocity=64, time=end)) # all notes off
+		messagesArrayB[nc].append(Message('note_off', note=pitch, velocity=64, time=end)) # all notes off
 		print(l, end)
 	
 for message in messagesArrayR:
